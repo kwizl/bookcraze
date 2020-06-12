@@ -10,12 +10,19 @@ RSpec.describe Category, type: :model do
     let(:article) { attributes_for(:article) }
     let(:category) { attributes_for(:category) }
 
-    it 'should save article' do
-      article_data = user.articles.build(article)
-      article_save = article_data.save
+    it 'should save category' do
+      article_data = user.articles.create(article)
 
-      category_data = article_save.categories.build(category)
+      category_data = article_data.categories.build(category)
       expect(category_data.save).to be(true)
+    end
+
+    it 'should save not save category with empty name' do
+      article_data = user.articles.create(article)
+
+      category_data = article_data.categories.build(category)
+      category_data.name = nil
+      expect(category_data.save).to be(false)
     end
   end
 end
