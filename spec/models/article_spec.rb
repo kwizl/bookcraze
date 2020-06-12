@@ -8,12 +8,11 @@ RSpec.describe Article, type: :model do
   end
   context 'Article Validation tests' do
     let(:user) { create(:user) }
-    let(:category) { create(:category) }
     let(:article) { attributes_for(:article) }
 
     it 'should save article' do
-      data = user.articles.build(article)
-      expect(data.save).to be(true)
+      article_data = user.articles.build(article)
+      expect(article_data.save).to be(true)
     end
   end
 end
