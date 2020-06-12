@@ -14,7 +14,7 @@ ActiveRecord::Schema.define(version: 2020_06_12_174131) do
 
   create_table "articles", force: :cascade do |t|
     t.integer "user_id", null: false
-    t.integer "category_id", null: false
+    t.integer "category_id"
     t.text "title"
     t.text "text"
     t.string "image"
