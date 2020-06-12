@@ -10,5 +10,10 @@ RSpec.describe User, type: :model do
     it 'should save user' do
       expect(user.save).to be(true)
     end
+
+    it 'should not save user with empty name' do
+      user.name = nil
+      expect(user.save).to be(false)
+    end
   end
 end
