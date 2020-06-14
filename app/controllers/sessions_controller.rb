@@ -19,8 +19,4 @@ class SessionsController < ApplicationController
     session.delete(:name)
     redirect_to login_path, notice: 'Logged out!'
   end
-
-  def find_user
-    @current_user = User.find_by(name: params[:name])
-  end
 end

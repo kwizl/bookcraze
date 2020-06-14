@@ -1,2 +1,22 @@
-<h1>Articles#new</h1>
-<p>Find me in app/views/articles/new.html.erb</p>
+<% provide(:title, 'Write Article') %>
+<h2>Create Article</h2>
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_with(model: @article, local: true) do |f| %>
+      <%= render 'shared/error_messages' %>
+      <div class="">
+        <%= f.label :title %>
+        <%= f.text_field :title %>
+      </div>
+      <div>
+        <%= f.label :text %>
+        <%= f.text_area :text %>
+      </div>
+      <div>
+        <%= f.label :image %>
+        <%= f.file_field :image %>
+      </div>
+      <%= f.submit "Create", class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>

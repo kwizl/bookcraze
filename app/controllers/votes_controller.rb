@@ -1,8 +1,8 @@
 class VotesController < ApplicationController
   def create
-    @vote = current_user.votes.new(post_id: params[:post_id])
+    @vote = current_user.votes.new(article_id: params[:article_id])
 
-    if @Vote.save
+    if @vote.save
       redirect_to articles_path, notice: 'You voted an article.'
     else
       redirect_to articles_path, alert: 'You cannot vote this article.'
@@ -10,7 +10,7 @@ class VotesController < ApplicationController
   end
 
   def destroy
-    vote = Vote.find_by(id: params[:id], user: current_user, post_id: params[:post_id])
+    vote = Vote.find_by(id: params[:id], user: current_user, article_id: params[:article_id])
     if vote
       vote.destroy
       redirect_to articlesposts_path, notice: 'You unvoted an article.'

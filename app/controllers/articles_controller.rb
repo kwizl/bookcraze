@@ -30,16 +30,12 @@ class ArticlesController < ApplicationController
   end
 
   def show
-    @article = Article.find_by(params[:id])
+    @article = Article.find(params[:id])
   end
 
   private
 
   def article_params
-    params.require(:article).permit(:text, :title, :image)
-  end
-
-  def user_authenticated
-    redirect_to login_path unless session[:name]
+    params.require(:article).permit(:title, :text, :image)
   end
 end
