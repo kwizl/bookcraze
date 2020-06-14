@@ -1,4 +1,6 @@
 class ArticlesController < ApplicationController
+  before_action :user_authenticated, only: %i[new create edit update show]
+
   def index
     @articles = Article.all
   end
@@ -8,7 +10,15 @@ class ArticlesController < ApplicationController
   end
 
   def create
-    @article = Article.new(article_params)
+    @article = current_user.articles.build(article_params)
+
+    respond_to do |format|
+      if @article.save
+        format.html { redirect_to @article, notice: 'Article was successfully created.' }
+      else
+        format.html { render :new }
+      end
+    end
   end
 
   def edit
@@ -21,5 +31,15 @@ class ArticlesController < ApplicationController
 
   def show
     @article = Article.find_by(params[:id])
+  end
+
+  private
+
+  def article_params
+    params.require(:article).permit(:text, :title, :image)
+  end
+
+  def user_authenticated
+    redirect_to login_path unless session[:name]
   end
 end

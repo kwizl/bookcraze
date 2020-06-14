@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
   before_action :user_authenticated, only: %i[index]
+  
   def new
     @user = User.new
   end

@@ -1,0 +1,17 @@
+<% if session[:name] %>
+  <div class="container">
+    <header class="d-flex justify-content-between">
+      <ul class="nav justify-content-center">
+        <li class="nav-item pr-3"><%= link_to 'Articles', articles_path %></li>
+        <li class="nav-item pr-3"><%= link_to 'Categories', categories_path %></li>
+      </ul>
+      <ul class="nav justify-content-end">
+        <% if session[:name] %>
+          <li class="nav-item pl-3"><%= link_to 'Logout', logout_path %></li>
+        <% else %>
+          <li class="nav-item"><a href="">Login</a></li>
+        <% end %>
+      </ul>
+    </header>
+  </div>
+<% end %>
