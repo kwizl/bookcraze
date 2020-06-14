@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+  before_action :user_authenticated, only: %i[index]
   def new
     @user = User.new
   end
@@ -6,10 +7,13 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
 
-    if @user.save
-      redirect_to login_path, notice: 'User was successfully created.'
-    else
-      render :new, alert: 'User was not created.'
+    respond_to do |format|
+      if @user.save
+        session[:name] = params[:name]
+        format.html { redirect_to users_path, notice: 'User was successfully created.' }
+      else
+        format.html { render :new }
+      end
     end
   end
 
@@ -17,5 +21,9 @@ class UsersController < ApplicationController
 
   def user_params
     params.require(:user).permit(:name)
+  end
+
+  def user_authenticated
+    redirect_to login_path unless session[:name]
   end
 end
