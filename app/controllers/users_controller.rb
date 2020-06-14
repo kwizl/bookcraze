@@ -23,8 +23,4 @@ class UsersController < ApplicationController
   def user_params
     params.require(:user).permit(:name)
   end
-
-  def user_authenticated
-    redirect_to login_path unless session[:name]
-  end
 end

@@ -3,6 +3,8 @@ Rails.application.routes.draw do
   post '/login', to: 'sessions#create'
   delete '/logout', to: 'sessions#destroy'
   
-  resources :users
-  resources :articles, only: %i[index new create edit update show]
+  get '/register', to: 'users#new'
+  post '/register', to: 'users#create'
+
+  resources :articles, only: %i[index new create show]
 end

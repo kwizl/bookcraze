@@ -8,4 +8,16 @@ class Article < ApplicationRecord
   
   validates :title, presence: true
   validates :text, presence: true
+
+  def main_thumbnail
+    return self.image.variant(:resize: '700x500').processed
+  end
+
+  def secondary_thumbnail
+    return self.image.variant(:resize: '400x500').processed
+  end
+
+  def thumbnail
+    return self.image.variant(:resize: '300x300!').processed
+  end
 end
