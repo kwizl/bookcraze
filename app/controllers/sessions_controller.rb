@@ -8,7 +8,7 @@ class SessionsController < ApplicationController
         session[:name] = params[:name]
         session[:id] = @current_user.id
   
-        format.html { redirect_to users_path, notice: 'Logged in successfully.' }
+        format.html { redirect_to articles_path, notice: 'Logged in successfully.' }
       else
         format.html { render action: :new }
       end
@@ -17,7 +17,7 @@ class SessionsController < ApplicationController
 
   def destroy
     session.delete(:name)
-    redirect_to(:login, notice: 'Logged out!')
+    redirect_to login_path, notice: 'Logged out!'
   end
 
   def find_user
