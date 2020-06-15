@@ -1,5 +1,5 @@
 class ArticlesController < ApplicationController
-  before_action :user_authenticated, only: %i[new create edit update show]
+  before_action :user_authenticated, only: %i[index new create show]
 
   def index
     @articles = Article.all
@@ -20,14 +20,6 @@ class ArticlesController < ApplicationController
         format.html { render :new }
       end
     end
-  end
-
-  def edit
-    @article = Article.find_by(params[:id])
-  end
-
-  def update
-    @article = Article.find_by(params[:id])
   end
 
   def show
