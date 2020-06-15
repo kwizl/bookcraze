@@ -11,6 +11,7 @@ class ArticlesController < ApplicationController
 
   def create
     @article = current_user.articles.build(article_params)
+    @article.image.attach(params[:article][:image])
 
     respond_to do |format|
       if @article.save
