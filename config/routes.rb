@@ -3,8 +3,9 @@ Rails.application.routes.draw do
   post '/login', to: 'sessions#create'
   get '/logout', to: 'sessions#logout'
 
-  get '/register', to: 'users#new'
-  post '/register', to: 'users#create'
+  resources :users
 
-  resources :articles, only: %i[index new create show]
+  resources :articles, only: %i[index new create show] do
+    resources :votes, only: [:create, :destroy]
+  end
 end

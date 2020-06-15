@@ -1,1 +1,11 @@
-<%= image_tag(@article.image) %>
+<%= image_tag @article.secondary_thumbnail if @article.image.attached? %>
+
+<div>
+  <%= form_tag article_votes_path(@article.id), method: :post do %>
+    <%= hidden_field_tag :article_id, current_user.id %>
+    <%= submit_tag "Vote" %>
+  <% end %>
+  <br><%= @article.total_votes %> votes
+</div>
+<%= @article.title %>
+<%= @article.text %>

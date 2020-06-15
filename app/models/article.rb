@@ -20,4 +20,8 @@ class Article < ApplicationRecord
   def thumbnail
     return self.image.variant(resize: '300x300!').processed
   end
+
+  def total_votes
+    return self.votes.count
+  end
 end

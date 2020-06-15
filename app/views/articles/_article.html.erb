@@ -1,5 +1,5 @@
-<div id="micropost">
+<div id="article">
   <%= image_tag article.main_thumbnail if article.image.attached? %>
   <%= article.title %>
-  <%= article.text %>
+  <%= link_to 'View', article %>
 </div>
