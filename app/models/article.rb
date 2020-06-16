@@ -8,13 +8,13 @@ class Article < ApplicationRecord
   
   validates :title, presence: true
   validates :text, presence: true
-
+ 
   def main_thumbnail
-    return self.image.variant(resize: '700x500').processed
+    return self.image.variant(resize: '800x450!').processed
   end
 
   def secondary_thumbnail
-    return self.image.variant(resize: '400x500').processed
+    return self.image.variant(resize: '500x400!').processed
   end
 
   def thumbnail
@@ -23,5 +23,13 @@ class Article < ApplicationRecord
 
   def total_votes
     return self.votes.count
+  end
+
+  def self.most_voted(article_id)
+    find_by_sql(['SELECT * FROM articles WHERE id = ?', article_id])
+  end
+
+  def self.other_voted(article_id)
+    find_by_sql(['SELECT * FROM articles WHERE id != ?', article_id])
   end
 end

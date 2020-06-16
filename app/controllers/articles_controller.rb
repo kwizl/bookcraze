@@ -2,7 +2,8 @@ class ArticlesController < ApplicationController
   before_action :user_authenticated, only: %i[index new create show]
 
   def index
-    @articles = Article.all
+    @main_articles = Article.most_voted(article_most_voted)
+    @articles = Article.other_voted(article_most_voted)
   end
 
   def new

@@ -1,5 +1,5 @@
 <div id="article">
-  <%= image_tag article.main_thumbnail if article.image.attached? %>
+  <%= image_tag article.thumbnail if article.image.attached? %>
   <%= article.title %>
   <%= link_to 'View', article %>
 </div>

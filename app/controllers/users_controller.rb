@@ -11,7 +11,7 @@ class UsersController < ApplicationController
     respond_to do |format|
       if @user.save
         session[:name] = params[:name]
-        format.html { redirect_to articles_path, notice: 'Your successfully registered.' }
+        format.html { redirect_to login_path, notice: 'Your successfully registered.' }
       else
         format.html { render :new }
       end
