@@ -30,6 +30,6 @@ class Article < ApplicationRecord
   end
 
   def self.other_voted(article_id)
-    find_by_sql(['SELECT * FROM articles WHERE id != ?', article_id])
+    find_by_sql(['SELECT * FROM articles WHERE id != ? ORDER BY created_at DESC', article_id])
   end
 end

@@ -1,5 +1,4 @@
 <%= image_tag @article.secondary_thumbnail if @article.image.attached? %>
-
 <div>
   <%= form_tag article_votes_path(@article.id), method: :post do %>
     <%= hidden_field_tag :article_id, current_user.id %>
