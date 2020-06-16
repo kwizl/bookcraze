@@ -15,6 +15,16 @@
         <%= f.label :image %>
         <%= f.file_field :image %>
       </div>
+      <%= f.fields_for :category do |ff| %>
+        <div>
+          <%= ff.label :name %>
+          <%= ff.text_field :name %>
+        </div>
+        <div>
+          <%= ff.label :priority %>
+          <%= ff.text_field :priority %>
+        </div>
+      <% end %>
       <%= f.submit 'Create', class: 'btn btn-primary' %>
     <% end %>
   </div>

@@ -8,6 +8,9 @@ class Article < ApplicationRecord
   
   validates :title, presence: true
   validates :text, presence: true
+  validates_associated :categories
+
+  accepts_nested_attributes_for :categories
  
   def main_thumbnail
     return self.image.variant(resize: '800x450!').processed
@@ -23,6 +26,11 @@ class Article < ApplicationRecord
 
   def total_votes
     return self.votes.count
+  end
+
+  def self.categories_order
+    find_by_sql(['SELECT * FROM articles a JOIN categories c ON a.id = c.article_id 
+      WHERE a.id = c.article_id ORDER BY c.priority DESC'])
   end
 
   def self.most_voted(article_id)

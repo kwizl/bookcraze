@@ -4,6 +4,7 @@ class ArticlesController < ApplicationController
   def index
     @main_articles = Article.most_voted(article_most_voted)
     @articles = Article.other_voted(article_most_voted)
+    @category_articles = Article.categories_order
   end
 
   def new
@@ -30,6 +31,6 @@ class ArticlesController < ApplicationController
   private
 
   def article_params
-    params.require(:article).permit(:title, :text, :image)
+    params.require(:article).permit(:title, :text, :image, categories_attributes: [:name, :priority])
   end
 end
