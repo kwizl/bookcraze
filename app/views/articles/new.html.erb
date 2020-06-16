@@ -15,7 +15,7 @@
         <%= f.label :image %>
         <%= f.file_field :image %>
       </div>
-      <%= f.fields_for :category do |ff| %>
+      <%= f.fields_for :categories do |ff| %>
         <div>
           <%= ff.label :name %>
           <%= ff.text_field :name %>

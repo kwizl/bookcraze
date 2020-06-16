@@ -6,7 +6,6 @@
     <% @category_articles.each do |a| %>
       <div class='col-md-4'>
         <%= image_tag a.thumbnail if a.image.attached? %>
-        <%= link_to a.categories.name, category_path %>
         <%= a.title %>
       </div>
     <% end %>
