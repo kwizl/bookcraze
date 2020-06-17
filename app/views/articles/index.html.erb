@@ -3,13 +3,7 @@
     <%= render partial: 'main_article', collection: @main_articles %>
   </div>
   <div class='row'>
-    <% @category_articles.each do |c| %>
-      <div class='col-md-4'>
-        <%= link_to c.name, category_path(c.id) %>
-        <%= image_tag c.thumbnail if c.image.attached? %>
-        <%= c.text %>
-      </div>
-    <% end %>
+    <%= category_articles_helper(@category_articles) %>
   </div>
   <div class='row'>
     <%= render @articles %>
