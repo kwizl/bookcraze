@@ -3,10 +3,11 @@
     <%= render partial: 'main_article', collection: @main_articles %>
   </div>
   <div class='row'>
-    <% @category_articles.each do |a| %>
+    <% @category_articles.each do |c| %>
       <div class='col-md-4'>
-        <%= image_tag a.thumbnail if a.image.attached? %>
-        <%= a.title %>
+        <%= link_to c.name, category_path(c.id) %>
+        <%= image_tag c.thumbnail if c.image.attached? %>
+        <%= c.text %>
       </div>
     <% end %>
   </div>
