@@ -2,46 +2,22 @@ require 'rails_helper'
 
 RSpec.describe "Articles", type: :request do
 
-  describe "GET /index" do
-    it "returns http success" do
-      get "/articles/index"
-      expect(response).to have_http_status(:success)
-    end
+  let(:user) { User.first }
+  let(:post) { attributes_for(:post) }
+  before(:each) do
+    login_as(user)
   end
 
-  describe "GET /new" do
-    it "returns http success" do
-      get "/articles/new"
-      expect(response).to have_http_status(:success)
+  describe 'the create article process' do
+    it 'should create a post' do
+      visit root_path
+
+      within('#new_post') do
+        fill_in 'Content', with: post[:content]
+      end
+
+      click_button 'Save'
+      expect(page).to have_content 'Post was successfully created.'
     end
   end
-
-  describe "GET /create" do
-    it "returns http success" do
-      get "/articles/create"
-      expect(response).to have_http_status(:success)
-    end
-  end
-
-  describe "GET /edit" do
-    it "returns http success" do
-      get "/articles/edit"
-      expect(response).to have_http_status(:success)
-    end
-  end
-
-  describe "GET /update" do
-    it "returns http success" do
-      get "/articles/update"
-      expect(response).to have_http_status(:success)
-    end
-  end
-
-  describe "GET /show" do
-    it "returns http success" do
-      get "/articles/show"
-      expect(response).to have_http_status(:success)
-    end
-  end
-
 end

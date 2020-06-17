@@ -30,7 +30,7 @@ class Article < ApplicationRecord
 
   def self.categories_order
     find_by_sql(['SELECT * FROM articles a JOIN categories c ON a.id = c.article_id 
-      WHERE a.id = c.article_id ORDER BY c.priority DESC'])
+      WHERE a.id = c.article_id GROUP BY c.name ORDER BY c.priority ASC'])
   end
 
   def self.most_voted(article_id)

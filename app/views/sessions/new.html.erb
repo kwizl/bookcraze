@@ -1,6 +1,6 @@
 <% provide(:title, 'Login') %>
 <h2 class="text-center text-primary">Login</h2>
-<div class="d-flex justify-content-center">
+<div id='login-div' class="d-flex justify-content-center">
   <%= form_tag sessions_path, method: :post do %>
     <div class="form-group">
       <%= label_tag :name, nil, class: 'col col-form-label' %>
