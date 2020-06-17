@@ -1,7 +1,7 @@
 # README
 
-# Lifestyle Article App with Ruby on Rails
-This repo contains code for a lifestyle article web application. The application enables registration of users, Sign In of users, posting articles and voting for articles.
+# Bookcraze App with Ruby on Rails
+This is a web application where bookworms can share their passion and love for the books that they love read. The user can signup, create an article with the category that the book falls in. Whether it is a novel or falls in the education category. The user can upload a thumbnail image and other users can vote for the article that they think impacted them the most. The most voted article appears as the main thumbnail while the rest are normal sizes. The category section displays the most recent articles in each category ordered by their priority.
 
 ## Built With
 

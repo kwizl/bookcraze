@@ -5,7 +5,7 @@ class VotesController < ApplicationController
     @vote = Vote.new(article_id: params[:article_id], user_id: current_user.id)
 
     if @vote.save
-      redirect_to article_path(@vote.article_id), notice: 'You voted a article.'
+      redirect_to article_path(@vote.article_id), notice: 'Article voted!'
     else
       redirect_to article_path(@vote.article_id), alert: 'You cannot vote this article.'
     end
