@@ -19,6 +19,8 @@ gem 'mini_magick', '~> 4.10', '>= 4.10.1'
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'rspec-rails', '~> 4.0.0'
+  gem 'capybara', '~> 3.32', '>= 3.32.2'
+  gem 'selenium-webdriver', '~> 3.142', '>= 3.142.7'
   gem 'shoulda-matchers'
   gem 'factory_bot_rails', '~> 5.2'
 end
@@ -31,8 +33,6 @@ group :development do
 end
 
 group :test do
-  gem 'capybara', '>= 2.15'
-  gem 'selenium-webdriver'
   gem 'webdrivers'
 end
 

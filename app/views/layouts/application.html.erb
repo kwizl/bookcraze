@@ -14,7 +14,19 @@
   <body>
     <%= render 'shared/navbar' %>
     <div class="container">
-      <%= yield %>
+      <main class='main'>
+        <% if notice.present? %>
+          <div class="notice">
+            <p> <%= notice %> </p>
+          </div>
+        <% end %>
+        <% if alert.present? %>
+          <div class="alert">
+            <p> <%= alert %> </p>
+          </div>
+        <% end %>
+        <%= yield %>
+      </main>
     </div>
   </body>
   <%= render 'shared/footer.html.erb' %>
