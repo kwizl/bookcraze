@@ -1,6 +1,6 @@
 class VotesController < ApplicationController
   before_action :user_authenticated
-  
+
   def create
     @vote = Vote.new(article_id: params[:article_id], user_id: current_user.id)
 

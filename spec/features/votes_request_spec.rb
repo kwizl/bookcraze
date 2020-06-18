@@ -3,6 +3,8 @@ require 'rails_helper'
 RSpec.describe "Votes", driver: :selenium_chrome, js: true do
   let(:user) { User.first }
   let(:article) { attributes_for(:article) }
+  let(:category) { attributes_for(:category) }
+
   before(:each) do
     login_as(user)
   end
@@ -12,11 +14,11 @@ RSpec.describe "Votes", driver: :selenium_chrome, js: true do
       visit new_article_path
       
       within('#article-div > form') do
-        fill_in 'Title', with: article[:title], :text, :image, categories_attributes:[:name, :priority]]
+        fill_in 'Title', with: article[:title]
         fill_in 'Text', with: article[:text]
         fill_in 'Image', with: attach_file("Browse", Rails.root + "spec/fixtures/the_king.jpeg")
-        fill_in 'Name', with: categories_attributes:[:name]
-        fill_in 'Priority', with: categories_attributes:[:priority]
+        fill_in 'Name', with: category[:name]
+        fill_in 'Priority', with: category[:priority]
       end
 
       click_button 'Save'

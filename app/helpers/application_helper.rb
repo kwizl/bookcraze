@@ -5,6 +5,6 @@ module ApplicationHelper
 
   def article_most_voted
     hash = Vote.group('article_id').count
-    return hash.invert.max&.last
+    hash.invert.max&.last
   end
 end

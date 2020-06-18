@@ -32,6 +32,6 @@ class ArticlesController < ApplicationController
   private
 
   def article_params
-    params.require(:article).permit(:title, :text, :image, categories_attributes:[:name, :priority])
+    params.require(:article).permit(:title, :text, :image, categories_attributes: %i[name priority])
   end
 end
