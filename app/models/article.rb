@@ -21,11 +21,11 @@ class Article < ApplicationRecord
   end
 
   def category_thumbnail
-    return self.image.variant(resize: '300x300!').processed
+    return self.image.variant(resize: '290x290!').processed
   end
 
   def thumbnail
-    return self.image.variant(resize: '220x220!').processed
+    return self.image.variant(resize: '272x272!').processed
   end
 
   def total_votes

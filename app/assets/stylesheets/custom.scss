@@ -18,14 +18,9 @@ html, body {
   height:100%;
 }
 
-#logo, #username {
+#username {
   font-size: 20px;
   font-weight: 900;
-}
-
-#logo:hover {
-  text-decoration: none;
-  text-decoration-style: none;
 }
 
 a {
@@ -132,10 +127,7 @@ input {
 }
 
 .row > img {
-  border-radius: 5px;
-  border: 2px;
-  border-color: $primary-color;
-  filter: brightness(60%);
+  filter: brightness(70%);
 }
 
 .main-thumbnail-info {
@@ -146,7 +138,7 @@ input {
   position: absolute;
   z-index: 1;
   top: -150px;
-  left: 90px;
+  left: 70px;
 
   a {
     font-size: 20px;
@@ -158,7 +150,7 @@ input {
   position: absolute;
   z-index: 1;
   top: -100px;
-  left: 90px;
+  left: 70px;
 }
 
 .category-thumbnail-info {
@@ -168,25 +160,30 @@ input {
 .category-thumbnail-title {
   position: absolute;
   z-index: 1;
-  top: 100px;
-  left: 50px;
+  top: 20px;
 
   a {
-    font-size: 10px;
+    font-size: 18px;
     font-weight: 700;
+    color: white;
+    text-decoration: underline;
   }
 }
 
 .category-thumbnail-text {
   position: absolute;
   z-index: 1;
-  top: 150px;
-  left: 50px;
+  top: 200px;
+}
+
+#category-img > img {
+  filter: brightness(70%);
+  opacity: 0.8;
 }
 
 #article-text, #category-text {
   color: white;
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 700;
 }
 
