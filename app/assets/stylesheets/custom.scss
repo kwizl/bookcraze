@@ -67,7 +67,9 @@ a {
 }
 
 #content {
-  overflow: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  overflow: hidden;
   padding-bottom: 50px;
 }
 
@@ -209,4 +211,5 @@ input {
   background-color: $primary-color-dark;
   color: white;
   text-align: center;
+  overflow: auto;
 }
