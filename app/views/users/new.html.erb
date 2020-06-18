@@ -1,12 +1,18 @@
-<% provide(:title, 'Sign up') %>
-<h2>Sign up</h2>
-<div class="row">
-  <div id='form-registration' class="col-md-6 col-md-offset-3">
+<h2 class="text-center text-primary">Register</h2>
+<div class="d-flex justify-content-center">
     <%= form_with(model: @user, local: true) do |f| %>
       <%= render 'shared/error_messages' %>
-      <%= f.label :name %>
-      <%= f.text_field :name %>
-      <%= f.submit "Register", class: "btn btn-primary" %>
+      <div class="form-group">
+        <%= label_tag :name, nil, class: 'col col-form-label' %>
+        <div class="col">
+          <%= text_field_tag :name, nil, class: 'form-control' %>
+        </div>
+      </div>
+      <div class="form-row text-center">
+        <div class="col-12">
+          <%= submit_tag "Register", class: 'btn btn-primary' %>
+        </div>
+      </div>
     <% end %>
   </div>
 </div>

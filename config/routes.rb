@@ -11,4 +11,5 @@ Rails.application.routes.draw do
   end
 
   resources :categories, only: %i[show]
+  root 'articles#index'
 end

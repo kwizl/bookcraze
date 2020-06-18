@@ -1,18 +1,17 @@
-<% if session[:name] %>
-  <div class="container">
-    <header class="d-flex justify-content-between">
-      <ul class="nav justify-content-center">
-        <li class="nav-item pr-3"><%= link_to 'Home', articles_path %></li>
-        <li class="nav-item pr-3"><%= link_to 'Write Article', new_article_path %></li>
-      </ul>
-      <ul class="nav justify-content-end">
-        <% if session[:name] %>
-          <li class="nav-item pl-3"><%= link_to 'Logout', logout_path %></li>
-        <% else %>
-          <li id='logout-link' class="nav-item"><%= link_to 'LOGIN', login_path %></li>
-          <li class="nav-item"><%= link_to 'REGISTER', register_path %></li>
-        <% end %>
-      </ul>
-    </header>
+<nav class="nav pl-3 pr-3">
+  <%= link_to 'Bookcraze', id: 'logo' %>
+  <div class="menu">
+    <div class="menu-item">
+      <%= link_to 'Home', articles_path %>
+    </div>
+    <div class="menu-item">
+      <%= link_to 'Write Article', new_article_path %>
+    </div>
   </div>
-<% end %>
+  <% if session[:name] %>
+    <li class="nav-item pl-3"><%= link_to 'Logout', logout_path %></li>
+  <% else %>
+    <li id='logout-link' class="nav-item"><%= link_to 'Login ', login_path %>|</li>
+    <li class="nav-item"><%= link_to ' Register', new_user_path %></li>
+  <% end %>
+</nav>
