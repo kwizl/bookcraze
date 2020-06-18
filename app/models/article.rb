@@ -20,6 +20,10 @@ class Article < ApplicationRecord
     return self.image.variant(resize: '900x400!').processed
   end
 
+  def category_thumbnail
+    return self.image.variant(resize: '300x300!').processed
+  end
+
   def thumbnail
     return self.image.variant(resize: '220x220!').processed
   end

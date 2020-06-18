@@ -194,6 +194,16 @@ input {
   margin: 3% 13% 3% 13%;
 }
 
+.category-article-text {
+  width: 300px;
+  font-weight: 900;
+}
+
+.category-article-text > div {
+  font-size: 12px;
+  font-weight: bold;
+}
+
 #footer {
   position: relative;
   height: 70px;

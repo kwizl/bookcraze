@@ -1,10 +1,14 @@
-<div class='col-lg-3 d-flex justify-content-center'>
-  <div class=''>
-    <%= image_tag category.thumbnail %>
+<div class='d-flex justify-content-center'>
+  <div class='category-article-text'>
+    <%= image_tag category.category_thumbnail %>
   </div>
-  <div>
+  <div class='category-article-text pl-2 pr-2'>
     <%= category.title %>
-    <%= truncate(category.text, 14) %>
-    <%= link_to 'Read More', article_path(category.article_id) %>
+    <div class='pt-2'>
+      <%= truncate(category.text, 14) %>
+    </div>
+    <div class='mt-2'>
+      <%= link_to 'Read More', article_path(category.article_id) %>
+    </div>
   </div>
 </div>
