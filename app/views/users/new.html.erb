@@ -2,7 +2,7 @@
 <div id='form-registration' class="d-flex justify-content-center">
   <%= form_with(model: @user, local: true) do |f| %>
     <%= render 'shared/error_messages' %>
-      <div class="form-group">
+    <div class="form-group">
       <%= f.label :name, class: 'col col-form-label' %>
       <div class="col">
         <%= f.text_field :name, class: 'form-control' %>
