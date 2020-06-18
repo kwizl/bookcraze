@@ -1,13 +1,14 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto:400,700,900&display=swap");
 
-$primary-color-dark: #689f38;
-$primary-color: #8bc34a;
+$primary-color-dark: #007BFF;
+$primary-color: rgb(34, 123, 218);
 $primary-color-light: #dcedc8;
 $primary-color-text: #212121;
 $divider-color: #bdbdbd;
 
-#logo {
+#logo, #username {
   font-size: 20px;
+  font-weight: 900;
 }
 
 #logo:hover {
@@ -51,7 +52,7 @@ a {
   }
 }
 
-.nav a {
+.nav a, .nav li {
   color: $primary-color-light;
   text-transform: uppercase;
   font-weight: 900;
