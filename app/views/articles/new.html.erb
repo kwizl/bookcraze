@@ -1,31 +1,43 @@
-<% provide(:title, 'Write Article') %>
-<h2>Create Article</h2>
-<div class="row">
-  <div id='article-div' class="col-md-6 col-md-offset-3">
+<h2 class="text-center text-primary">Register</h2>
+<div id='article-div' class="d-flex justify-content-center">
     <%= form_with(model: @article, local: true) do |f| %>
-      <div class="">
-        <%= f.label :title %>
-        <%= f.text_field :title %>
+      <div class="form-group">
+        <%= f.label :title, class: 'col col-form-label' %>
+        <div class="col">
+          <%= f.text_field :title, class: 'form-control' %>
+        </div>
       </div>
-      <div>
-        <%= f.label :text %>
-        <%= f.text_area :text %>
+      <div class="form-group">
+        <%= f.label :text, class: 'col col-form-label' %>
+        <div class="col">
+          <%= f.text_area :text, class: 'form-control' %>
+        </div>
       </div>
-      <div>
-        <%= f.label :image %>
-        <%= f.file_field :image %>
+      <div class="form-group">
+        <%= f.label :image, class: 'col col-form-label' %>
+        <div class="col">
+          <%= f.file_field :image, class: 'form-control' %>
+        </div>
       </div>
       <%= f.fields_for :categories do |ff| %>
-        <div>
-          <%= ff.label :name %>
-          <%= ff.text_field :name %>
+        <div class="form-group">
+          <%= ff.label :name, class: 'col col-form-label' %>
+          <div class="col">
+            <%= ff.text_field :name, class: 'form-control' %>
+          </div>
         </div>
-        <div>
-          <%= ff.label :priority %>
-          <%= ff.text_field :priority %>
+        <div class="form-group">
+          <%= ff.label :priority, class: 'col col-form-label' %>
+          <div class="col">
+            <%= ff.text_field :priority, class: 'form-control' %>
+          </div>
         </div>
       <% end %>
-      <%= f.submit 'Save', class: 'btn btn-primary' %>
+      <div class="form-row text-center">
+        <div class="col-12">
+          <%= f.submit 'Save', class: 'btn btn-primary' %>
+        </div>
+      </div>
     <% end %>
   </div>
 </div>

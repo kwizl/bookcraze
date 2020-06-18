@@ -1,18 +1,18 @@
 <h2 class="text-center text-primary">Register</h2>
-<div class="d-flex justify-content-center">
-    <%= form_with(model: @user, local: true) do |f| %>
-      <%= render 'shared/error_messages' %>
+<div id='form-registration' class="d-flex justify-content-center">
+  <%= form_with(model: @user, local: true) do |f| %>
+    <%= render 'shared/error_messages' %>
       <div class="form-group">
-        <%= label_tag :name, nil, class: 'col col-form-label' %>
-        <div class="col">
-          <%= text_field_tag :name, nil, class: 'form-control' %>
-        </div>
+      <%= f.label :name, class: 'col col-form-label' %>
+      <div class="col">
+        <%= f.text_field :name, class: 'form-control' %>
       </div>
-      <div class="form-row text-center">
-        <div class="col-12">
-          <%= submit_tag "Register", class: 'btn btn-primary' %>
-        </div>
+    </div>
+    <div class="form-row text-center">
+      <div class="col-12">
+        <%= f.submit "Register", class: "btn btn-primary" %>
       </div>
-    <% end %>
+    </div>
+  <% end %>
   </div>
 </div>

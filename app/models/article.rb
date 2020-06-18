@@ -13,7 +13,7 @@ class Article < ApplicationRecord
   accepts_nested_attributes_for :categories
  
   def main_thumbnail
-    return self.image.variant(resize: '800x450!').processed
+    return self.image.variant(resize: '1200x650!').processed
   end
 
   def secondary_thumbnail
