@@ -13,15 +13,15 @@ class Article < ApplicationRecord
   accepts_nested_attributes_for :categories
  
   def main_thumbnail
-    return self.image.variant(resize: '1200x650!').processed
+    return self.image.variant(resize: '1150x600!').processed
   end
 
   def secondary_thumbnail
-    return self.image.variant(resize: '500x400!').processed
+    return self.image.variant(resize: '900x400!').processed
   end
 
   def thumbnail
-    return self.image.variant(resize: '300x300!').processed
+    return self.image.variant(resize: '220x220!').processed
   end
 
   def total_votes

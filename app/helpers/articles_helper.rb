@@ -20,10 +20,12 @@ module ArticlesHelper
     html = ''
     categories.each do |c|
       html += <<-HTML
-      <div class='col-md-4'>
-      #{link_to c.name, category_path(c.id)}
       #{image_tag c.thumbnail if c.image.attached?}
-      #{c.text}
+      <div class='category-thumbnail-title col-3'>
+        #{link_to c.name, category_path(c.id)}
+      </div>
+      <div class='category-thumbnail-text'>
+        <p id='category-text' class='lead'>#{truncate(c.text, 12)}<p>
       </div>
       HTML
     end

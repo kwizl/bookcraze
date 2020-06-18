@@ -6,6 +6,18 @@ $primary-color-light: #dcedc8;
 $primary-color-text: #212121;
 $divider-color: #bdbdbd;
 
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  background: #fff;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  height:100%;
+}
+
 #logo, #username {
   font-size: 20px;
   font-weight: 900;
@@ -14,13 +26,6 @@ $divider-color: #bdbdbd;
 #logo:hover {
   text-decoration: none;
   text-decoration-style: none;
-}
-
-body {
-  background: #fff;
-  position: relative;
-  font-family: "Roboto", sans-serif;
-  font-weight: 400;
 }
 
 a {
@@ -63,15 +68,17 @@ a {
 }
 
 .main {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 16px;
+  min-height: 91.5%;
+}
+
+#content {
+  overflow: auto;
+  padding-bottom: 50px;
 }
 
 .notice,
 .alert {
-  margin-bottom: 8px;
+  margin-bottom: 8px !important;
   width: 100%;
   height: 30px;
   text-align: center;
@@ -154,12 +161,41 @@ input {
   left: 90px;
 }
 
-#article-text {
+.category-thumbnail-info {
+  position: relative;
+}
+
+.category-thumbnail-title {
+  position: absolute;
+  z-index: 1;
+  top: 100px;
+  left: 50px;
+
+  a {
+    font-size: 10px;
+    font-weight: 700;
+  }
+}
+
+.category-thumbnail-text {
+  position: absolute;
+  z-index: 1;
+  top: 150px;
+  left: 50px;
+}
+
+#article-text, #category-text {
   color: white;
   font-size: 14px;
   font-weight: 700;
 }
 
 #footer {
+  position: relative;
+  height: 70px;
+  margin-top: -70px;
+  clear: both;
   background-color: $primary-color-dark;
+  color: white;
+  text-align: center;
 }

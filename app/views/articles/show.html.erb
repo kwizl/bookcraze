@@ -1,10 +1,14 @@
 <%= image_tag @article.secondary_thumbnail if @article.image.attached? %>
-<div id='vote-div'>
-  <%= form_tag article_votes_path(@article.id), method: :post do %>
-    <%= hidden_field_tag :article_id, current_user.id %>
-    <%= submit_tag "Vote" %>
-  <% end %>
-  <br><%= @article.total_votes %> votes
+<div class='mt-3'>
+  <%= @article.text %>
 </div>
-<%= @article.title %>
-<%= @article.text %>
+<div class="form-row text-center mt-3">
+  <div class="col-12">
+    <%= form_tag article_votes_path(@article.id), method: :post do %>
+      <%= hidden_field_tag :article_id, current_user.id %>
+      <%= submit_tag "Vote", class: 'btn btn-primary' %>
+    <% end %>
+  </div>
+</div>
+<br><%= @article.total_votes %> votes
+</div>

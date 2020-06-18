@@ -7,7 +7,7 @@ class VotesController < ApplicationController
     if @vote.save
       redirect_to article_path(@vote.article_id), notice: 'Article voted!'
     else
-      redirect_to article_path(@vote.article_id), alert: 'You cannot vote this article.'
+      redirect_to article_path(@vote.article_id), alert: 'You cannot vote this article twice.'
     end
   end
 
