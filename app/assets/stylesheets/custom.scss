@@ -124,6 +124,42 @@ input {
   }
 }
 
+.row > img {
+  border-radius: 5px;
+  border: 2px;
+  border-color: $primary-color;
+  filter: brightness(60%);
+}
+
+.main-thumbnail-info {
+  position: relative;
+}
+
+.main-thumbnail-title {
+  position: absolute;
+  z-index: 1;
+  top: -150px;
+  left: 90px;
+
+  a {
+    font-size: 20px;
+    font-weight: 900;
+  }
+}
+
+.main-thumbnail-text {
+  position: absolute;
+  z-index: 1;
+  top: -100px;
+  left: 90px;
+}
+
+#article-text {
+  color: white;
+  font-size: 14px;
+  font-weight: 700;
+}
+
 #footer {
-  background-color: #4E443F;
+  background-color: $primary-color-dark;
 }
