@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe 'Articles', driver: :selenium_chrome, js: true do
-  let(:user) { create(:user) }
+  let(:user) { User.first }
   let(:article) { attributes_for(:article) }
   let(:category) { attributes_for(:category) }
 

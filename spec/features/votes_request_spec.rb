@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe 'Votes', driver: :selenium_chrome, js: true do
-  let(:user) { attributes_for(:user) }
+  let(:user) { User.first }
   let(:article) { attributes_for(:article) }
   let(:category) { attributes_for(:category) }
 
