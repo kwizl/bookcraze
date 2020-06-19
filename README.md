@@ -8,9 +8,9 @@ This is a web application where bookworms can share their passion and love for t
 
 ## Live Demo
 
-[Live Demo]()
+[Live Demo](https://frozen-reaches-25802.herokuapp.com/login)
 
-![screenshot]()
+![screenshot](./app/assets/images/img.png)
 
 ## Getting Started
 
