@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe 'Users', driver: :selenium_chrome, js: true do
 
-  let(:user) { create(:user) }
+  let(:user) { User.first }
   
   it "signs me in" do
     visit login_path

@@ -46,27 +46,19 @@ RSpec.configure do |config|
   config.filter_rails_from_backtrace!
 
   config.before(:suite) do
-    DatabaseCleaner.clean_with(:truncation)
+    DatabaseCleaner.clean_with :truncation, except: %w(ar_internal_metadata)
   end
 
-  config.before(:each) do
+  config.before(:suite) do
     DatabaseCleaner.strategy = :transaction
   end
 
-  config.before(:all, js: true) do
-    DatabaseCleaner.strategy = :truncation
+  config.before(:each) do
+    DatabaseCleaner.start
   end
 
-  config.before :suite do
-    load "#{Rails.root}/db/seeds.rb"
-  end
-
-  config.after(:all) do
+  config.after(:each) do
     DatabaseCleaner.clean
-  end
-
-  config.after(:suite) do
-    DatabaseCleaner.clean_with(:truncation)
   end
 end
 

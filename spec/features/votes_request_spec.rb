@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe "Votes", driver: :selenium_chrome, js: true do
-  let(:user) { create(:user) }
+  let(:user) { attributes_for(:user) }
   let(:article) { attributes_for(:article) }
   let(:category) { attributes_for(:category) }
 
@@ -10,7 +10,7 @@ RSpec.describe "Votes", driver: :selenium_chrome, js: true do
       visit login_path
 
       within("#login-div > form") do
-        fill_in 'Name', with: user.name
+        fill_in 'Name', with: user[:name]
       end
 
       click_button 'Login'

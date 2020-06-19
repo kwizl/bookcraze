@@ -1,6 +1,7 @@
 <h2 class="text-center text-primary">Register</h2>
 <div id='article-div' class="d-flex justify-content-center">
     <%= form_with(model: @article, local: true) do |f| %>
+      <%= render 'shared/error_messages', object: f.object %>
       <div class="form-group">
         <%= f.label :title, class: 'col col-form-label' %>
         <div class="col">
