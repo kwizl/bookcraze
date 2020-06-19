@@ -20,7 +20,7 @@ RSpec.describe 'Users', driver: :selenium_chrome, js: true do
       fill_in 'Name', with: user.name
     end
     click_button 'Login'
-    
+
     within('#navbar-header') do
       click_link('Logout')
     end

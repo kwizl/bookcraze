@@ -29,8 +29,8 @@ require './spec/support/factory_bot.rb'
 begin
   ActiveRecord::Migration.maintain_test_schema!
 rescue ActiveRecord::PendingMigrationError => e
-    puts e.to_s.strip
-    exit 1
+  puts e.to_s.strip
+  exit 1
 end
 
 Capybara.register_driver :selenium_chrome do |app|
@@ -63,7 +63,7 @@ RSpec.configure do |config|
   config.before(:each) do
     DatabaseCleaner.start
   end
-  
+
   config.before(:each) do
     DatabaseCleaner.strategy = :transaction
   end
