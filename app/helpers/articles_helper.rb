@@ -11,7 +11,7 @@ module ArticlesHelper
           #{link_to c.name, category_path(c.id)}
         </div>
         <div class='category-thumbnail-text ml-2 mr-2'>
-          <p id='category-text' class='lead'>#{truncate(c.text, 30)}<p>
+          <p id='category-text' class='lead'>#{truncate(c.text, 80)}<p>
         </div>
       </div>
       HTML

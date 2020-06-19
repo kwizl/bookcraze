@@ -14,7 +14,7 @@ gem 'rails', '~> 6.0.3', '>= 6.0.3.1'
 gem 'sass-rails', '>= 6'
 gem 'turbolinks', '~> 5'
 gem 'webpacker', '~> 4.0'
-gem 'sqlite3'
+gem 'pg', '~> 0.18.4'
 
 group :development, :test do
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
@@ -42,10 +42,6 @@ group :test do
   gem 'database_cleaner-sequel'
   gem 'rspec'
   gem 'webdrivers'
-end
-
-group :production do
-  gem 'pg'
 end
 
 gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
