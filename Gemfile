@@ -38,8 +38,8 @@ end
 
 group :test do
   gem 'database_cleaner-active_record'
-  gem 'database_cleaner-sequel'
   gem 'database_cleaner-redis'
+  gem 'database_cleaner-sequel'
   gem 'rspec'
   gem 'webdrivers'
 end

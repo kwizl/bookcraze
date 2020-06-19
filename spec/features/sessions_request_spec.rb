@@ -1,13 +1,12 @@
 require 'rails_helper'
 
 RSpec.describe 'Users', driver: :selenium_chrome, js: true do
-
   let(:user) { User.first }
-  
-  it "signs me in" do
+
+  it 'signs me in' do
     visit login_path
 
-    within("#login-div > form") do
+    within('#login-div > form') do
       fill_in 'Name', with: user.name
     end
     click_button 'Login'
