@@ -8,7 +8,7 @@ This is a web application where bookworms can share their passion and love for t
 
 ## Live Demo
 
-[Live Demo](https://frozen-reaches-25802.herokuapp.com/login)
+[Live Demo](https://calm-inlet-68629.herokuapp.com/)
 
 ![screenshot](./app/assets/images/screenshot.png)
 
