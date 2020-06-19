@@ -6,7 +6,7 @@ RSpec.describe Category, type: :model do
   end
 
   context 'Category Validation tests' do
-    let(:user) { create(:user) }
+    let(:user) { User.second }
     let(:article) { attributes_for(:article) }
     let(:category) { attributes_for(:category) }
 
