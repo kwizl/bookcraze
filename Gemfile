@@ -44,4 +44,8 @@ group :test do
   gem 'webdrivers'
 end
 
+group :production do
+  gem 'pg'
+end
+
 gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
