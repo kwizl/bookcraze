@@ -64,7 +64,8 @@ bundle exec rspec
 ```
 
 > All tests are contained in the rspec folder which is in the root directory of the project. 
-To run all test type **bundle exec rspec** in the terminal. To run a specific test type **bundle exec rspec spec/folder_name/spec_file.rb**
+To run all test type **bundle exec rspec** in the terminal. To run a specific test type 
+**bundle exec rspec spec/folder_name/spec_file.rb**
 
 ## Authors
 
