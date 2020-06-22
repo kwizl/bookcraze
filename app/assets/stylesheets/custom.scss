@@ -1,10 +1,9 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto:400,700,900&display=swap");
 
 $primary-color-dark: #4E443F;
-$primary-color: rgb(34, 123, 218);
+$primary-color: #FA894A;
 $primary-color-light: #dcedc8;
 $primary-color-text: #212121;
-$divider-color: #bdbdbd;
 
 * {
   margin: 0;
@@ -60,18 +59,18 @@ a {
 }
 
 .nav a:hover {
-  color: #FA894A;
+  color: $primary-color;
   text-decoration-line: none;
 }
 
 input.btn.btn-primary {
   background-color: #4E443F;
   border: #4E443F;
-  color: #FA894A;
+  color: $primary-color;
 }
 
 .form-group.text-center a, .text-center.topic {
-  color: #FA894A;
+  color: $primary-color;
 }
 
 .main {
@@ -157,11 +156,11 @@ input {
   a {
     font-size: 20px;
     font-weight: 900;
-    color: #FA894A;
+    color: $primary-color;
   }
 
   a:hover {
-    color: #FA894A;
+    color: $primary-color;
   }
 }
 
@@ -198,7 +197,7 @@ input {
 }
 
 .cat-article, .read-more a, .text-center.topic {
-  color: #FA894A;
+  color: $primary-color;
 }
 
 #category-img > img {
@@ -229,11 +228,31 @@ input {
 
 #footer {
   position: relative;
-  height: 70px;
-  margin-top: -70px;
-  clear: both;
+  margin-top: -60px;
   background-color: $primary-color-dark;
-  color: white;
-  text-align: center;
   overflow: auto;
+  padding-top: 20px;
+}
+
+#footer-logo a {
+  margin-left: 20px;
+  font-weight: 700;
+  color: $primary-color;
+}
+
+.footer-icons {
+  margin-right: 30px;
+}
+
+.footer-icons i {
+  color: $primary-color;
+}
+
+.footer-links {
+  color: $primary-color;
+}
+
+.footer-links:hover {
+  color: $primary-color;
+  text-decoration: none;
 }

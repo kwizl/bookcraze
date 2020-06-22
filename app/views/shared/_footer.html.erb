@@ -1,13 +1,22 @@
-<nav class="nav pl-3 pr-3">
-  <%= link_to 'Bookcraze', class: 'logo' %>
-  <div class="menu">
-    <div class="menu-item">
-      <a href="#" class="text-white mr-3">© 2020 Copyright. All rights reserved.</a>
-    </div>
-    <div class="menu-item ml-3 pl-3">
-      <a href="#" class="text-white ml-3 mr-3"><a href="#"> Privacy</a>
-      <a href="#" class='mr-3 ml-3'> Policy</a>
-      <a href="#" class='mr-3 ml-3'> Terms & Conditions</a> </a>
+<footer id='footer' class='row'>
+  <div id='footer-logo' class='col-2'>
+    <%= link_to 'BOOKCRAZE', class: 'logo pl-3' %>
+  </div>
+  <div class='col-8'>
+    <div class='row'>
+      <div class="menu-item">
+        <a href="#" class="text-white mr-3">© 2020 Copyright. All rights reserved.</a>
+      </div>
+      <div class="menu-item ml-3 pl-3">
+        <a class='footer-links mr-3' href="#" class="text-white ml-3 mr-3">Privacy</a>
+        <a class='footer-links mr-3' href="#" class='mr-3 ml-3'> Policy</a>
+        <a class='footer-links mr-3' href="#" class='mr-3 ml-3'> Terms & Conditions</a> </a>
+      </div>
     </div>
   </div>
-</nav>
+  <div class='col-2'>
+    <span class='footer-icons'><i class="fa fa-twitter fa-lg"></i></span>
+    <span class='footer-icons'><i class="fa fa-instagram fa-lg"></i></span>
+    <span class='footer-icons'><i class="fa fa-facebook fa-lg"></i></span>
+  </div>
+</footer>
