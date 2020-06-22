@@ -1,5 +1,6 @@
-<h3 class="text-center topic">Login</h3>
-<div id='login-div' class="d-flex justify-content-center">
+<div>
+  <h3 class="text-center topic">Login</h3>
+  <div id='login-div' class="d-flex justify-content-center">
   <%= form_tag sessions_path, method: :post do %>
     <div class="form-group">
       <%= label_tag :name, nil, class: 'col col-form-label' %>
@@ -14,4 +15,5 @@
       </div>
     </div>
   <% end %>
+  </div>
 </div>
