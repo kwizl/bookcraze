@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto:400,700,900&display=swap");
 
-$primary-color-dark: #007BFF;
+$primary-color-dark: #4E443F;
 $primary-color: rgb(34, 123, 218);
 $primary-color-light: #dcedc8;
 $primary-color-text: #212121;
@@ -54,12 +54,14 @@ a {
 
 .nav a, .nav li {
   color: $primary-color-light;
-  text-transform: uppercase;
-  font-weight: 900;
+  font-size: 15px;
+  font-weight: 700;
+  color: rgb(53, 53, 53);
 }
 
 .nav a:hover {
-  color: #fff;
+  color: #FA894A;
+  text-decoration-line: none;
 }
 
 .main {
