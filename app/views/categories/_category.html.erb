@@ -3,11 +3,13 @@
     <%= image_tag category.category_thumbnail %>
   </div>
   <div class='category-article-text pl-2 pr-2'>
-    <%= category.title %>
+    <span class='cat-article'>
+      <%= category.title %>
+    </span>
     <div class='pt-2'>
       <%= truncate(category.text, 500) %>
     </div>
-    <div class='mt-2'>
+    <div class='read-more mt-2'>
       <%= link_to 'Read More', article_path(category.article_id) %>
     </div>
   </div>
