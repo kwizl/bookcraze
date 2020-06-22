@@ -25,9 +25,4 @@ module ArticlesHelper
     l = length - truncate_string.chars.to_a.size
     (text.chars.to_a.size > length ? text.chars.to_a[0...l].join + truncate_string : text).to_s
   end
-
-  def categories_nav
-    categories_navbar = Category.all
-    categories_navbar
-  end
 end

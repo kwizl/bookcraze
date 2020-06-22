@@ -5,15 +5,13 @@
       <%= link_to 'Home', articles_path %>
     </div>
     <% if session[:name] %>
-      <% categories_nav.each do |c| %>
-        <div class="menu-item">
-          <%= link_to c.name, category_path(c.id) %>
-        </div>
-      <% end %>
-    <% else %>
       <div class="menu-item">
         <%= link_to 'Write Article', new_article_path %>
       </div>
+      <div class='menu-item'>
+        <%= category_navbar(categories_nav) %>%
+      </div>
+    <% else %>
     <% end %>
   </div>
   <% if session[:name] %>
