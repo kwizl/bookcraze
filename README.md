@@ -20,6 +20,7 @@ To get a local copy up and running follow these simple example steps.
 
 Ruby: 2.6.3
 Rails: 5.2.3
+Postgres Database
 Chromium Chrome Driver: 83.0 and 
 
 ### Setup
