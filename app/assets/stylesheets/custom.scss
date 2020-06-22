@@ -228,10 +228,11 @@ input {
 
 #footer {
   position: relative;
-  margin-top: -60px;
+  clear: both;
+  height: 50px;
   background-color: $primary-color-dark;
   overflow: auto;
-  padding-top: 20px;
+  padding-top: 5px;
 }
 
 #footer-logo a {
