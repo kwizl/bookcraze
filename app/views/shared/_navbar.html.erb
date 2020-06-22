@@ -4,9 +4,17 @@
     <div class="menu-item">
       <%= link_to 'Home', articles_path %>
     </div>
-    <div class="menu-item">
-      <%= link_to 'Write Article', new_article_path %>
-    </div>
+    <% if session[:name] %>
+      <% categories_nav.each do |c| %>
+        <div class="menu-item">
+          <%= link_to c.name, category_path(c.id) %>
+        </div>
+      <% end %>
+    <% else %>
+      <div class="menu-item">
+        <%= link_to 'Write Article', new_article_path %>
+      </div>
+    <% end %>
   </div>
   <% if session[:name] %>
     <li class="nav-item"><%= current_user.name %></li>
