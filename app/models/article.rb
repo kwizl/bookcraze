@@ -13,7 +13,7 @@ class Article < ApplicationRecord
   accepts_nested_attributes_for :categories
 
   def main_thumbnail
-    image.variant(resize: '1150x550!').processed
+    image.variant(resize: '1168x550!').processed
   end
 
   def secondary_thumbnail
@@ -25,7 +25,7 @@ class Article < ApplicationRecord
   end
 
   def thumbnail
-    image.variant(resize: '272x272!').processed
+    image.variant(resize: '292x272!').processed
   end
 
   def total_votes
@@ -34,7 +34,7 @@ class Article < ApplicationRecord
 
   def self.categories_order
     find_by_sql(['SELECT * FROM articles a JOIN categories c ON a.id = c.article_id
-      WHERE a.id = c.article_id GROUP BY a.id, c.id, c.name ORDER BY c.priority ASC'])
+      WHERE a.id = c.article_id GROUP BY c.name, a.id, c.id ORDER BY c.priority ASC'])
   end
 
   def self.category_article(name)

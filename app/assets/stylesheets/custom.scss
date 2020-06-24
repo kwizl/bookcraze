@@ -164,10 +164,15 @@ input {
   }
 }
 
-#main-id, #secondary-id {
-  margin-left: calc((100vw - 1160px)/2);
-  margin-right: calc((100vw - 1160px)/2);
+#main-id {
+  margin-left: calc((100vw - 1180px)/2);
+  margin-right: calc((100vw - 1180px)/2);
+  padding-left: 0 !important;
   overflow: hidden;
+}
+
+#secondary-id {
+  margin: 0 !important;
 }
 
 .main-thumbnail-text {
@@ -206,6 +211,10 @@ input {
 
 .cat-article, .read-more a, .text-center.topic {
   color: $primary-color;
+}
+
+#cat-row {
+  margin: 0 !important;
 }
 
 #category-img > img {
