@@ -11,13 +11,9 @@ $primary-color-text: #212121;
 *::after {
   margin: 0;
   padding: 0;
-  box-sizing: inherit;
 }
 
 body {
-  font-size: 62.5%;
-  box-sizing: border-box;
-  min-width: 570px;
   font-family: "Roboto", sans-serif;
   font-weight: 400;
 }
@@ -38,7 +34,8 @@ a {
   padding: 16px 48px;
   background-color: white;
   color: $primary-color-light;
-
+  height: 60px;
+  
   .menu {
     width: 80%;
     justify-content: space-between;
@@ -79,11 +76,7 @@ input.btn.btn-primary {
 }
 
 #content {
-  min-height: 91vh;
-  overflow: hidden;
-  display: block;
-  position: relative;
-  padding-bottom: 100px;
+  padding-bottom: 2.5rem;
 }
 
 .notice,
@@ -145,6 +138,11 @@ input {
   filter: brightness(70%);
 }
 
+.main {
+  position: relative;
+  min-height: 100vh;
+}
+
 .main-thumbnail-info {
   position: relative;
 }
@@ -164,6 +162,10 @@ input {
   a:hover {
     color: $primary-color;
   }
+}
+
+#main-id {
+  margin-right: calc((100vw - 1100px)/2);
 }
 
 .main-thumbnail-text {
@@ -229,9 +231,7 @@ input {
 }
 
 #footer {
-  position: relative;
   height: 50px;
-  clear: both;
   background-color: $primary-color-dark;
   padding-top: 10px;
   position: absolute;
@@ -240,7 +240,6 @@ input {
 }
 
 #footer-logo a {
-  margin-left: 20px;
   font-weight: 700;
   color: $primary-color;
 }
@@ -260,4 +259,8 @@ input {
 .footer-links:hover {
   color: $primary-color;
   text-decoration: none;
+}
+
+#article-div {
+  padding-bottom: 10vh;
 }
