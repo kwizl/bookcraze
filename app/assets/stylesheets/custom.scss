@@ -164,8 +164,10 @@ input {
   }
 }
 
-#main-id {
-  margin-right: calc((100vw - 1100px)/2);
+#main-id, #secondary-id {
+  margin-left: calc((100vw - 1160px)/2);
+  margin-right: calc((100vw - 1160px)/2);
+  overflow: hidden;
 }
 
 .main-thumbnail-text {
@@ -178,6 +180,8 @@ input {
 
 .category-thumbnail-info {
   position: relative;
+  margin: 0;
+  padding-left: calc((100vw - 1128px)/2);
 }
 
 .category-thumbnail-title {

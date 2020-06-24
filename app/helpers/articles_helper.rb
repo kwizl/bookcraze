@@ -5,7 +5,7 @@ module ArticlesHelper
     html = ''
     categories.each do |c|
       html += <<-HTML
-      <div id="category-img" class='ml-3'>
+      <div id="category-img">
         #{image_tag c.thumbnail if c.image.attached?}
         <div class='category-thumbnail-title ml-2 mr-2'>
           #{link_to c.name, category_path(c.id)}
