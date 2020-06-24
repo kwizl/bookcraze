@@ -6,7 +6,7 @@
     <%= @article.text %>
   </div>
 </div>
-<div class="d-flex justify-content-center form-row text-center mt-2">
+<div id='form-vote' class="d-flex justify-content-center form-row text-center mt-2">
   <div id="vote-div" class="col-3">
     <%= form_tag article_votes_path(@article.id), method: :post do %>
       <%= hidden_field_tag :article_id, current_user.id %>
