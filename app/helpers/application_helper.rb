@@ -9,7 +9,7 @@ module ApplicationHelper
   end
 
   def categories_nav
-    categories_navbar = Category.all
+    categories_navbar = Category.find_by_sql(['SELECT name FROM categories GROUP BY name'])
     categories_navbar
   end
 
@@ -18,7 +18,7 @@ module ApplicationHelper
     categories.each do |c|
       html += <<-HTML
       <div class='menu-item'>
-        #{link_to c.name, category_path(c.id)}
+        #{link_to c.name}
       </div>
       HTML
     end

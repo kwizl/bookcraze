@@ -1,6 +1,6 @@
 module ArticlesHelper
   include ApplicationHelper
-  
+
   def category_articles_helper(categories)
     html = ''
     categories.each do |c|

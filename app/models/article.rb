@@ -33,12 +33,12 @@ class Article < ApplicationRecord
   end
 
   def self.categories_order
-    find_by_sql(['SELECT * FROM articles a JOIN categories c ON a.id = c.article_id
-      WHERE a.id = c.article_id GROUP BY c.name, a.id, c.id ORDER BY c.priority ASC'])
+    find_by_sql(['SELECT c.name, a.id, c.id, * FROM articles a JOIN categories c ON a.id = c.article_id
+      WHERE a.id = c.article_id  GROUP BY c.name, a.id, c.id ORDER BY c.priority ASC'])
   end
 
   def self.category_article(name)
-    find_by_sql(['SELECT * FROM articles a JOIN categories c ON a.id = c.article_id WHERE c.name = ?', name])
+    find_by_sql(['SELECT DISTINCT c.name, * FROM articles a JOIN categories c ON a.id = c.article_id WHERE c.name = ?', name])
   end
 
   def self.most_voted(article_id)
