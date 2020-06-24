@@ -13,7 +13,7 @@
 
   <body id="body">
     <%= render 'shared/navbar' %>
-    <main class='main'>
+    <div class='main'>
       <% if notice.present? %>
         <div class="notice">
           <p> <%= notice %> </p>
@@ -27,7 +27,7 @@
       <div id='content'>
         <%= yield %>
       </div>
-    </main>
-    <%= render 'shared/footer' %>
+      <%= render 'shared/footer' %>
+    </div>
   </body>
 </html>
