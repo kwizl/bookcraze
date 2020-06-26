@@ -3,6 +3,17 @@
     <%= render partial: 'main_article', collection: @main_articles %>
   </div>
   <div id='secondary-id' class='row'>
-    <%= category_articles_helper(@category_articles) %>
+    <div class="category-img">
+      <%= render partial: 'one_article', collection: @one_articles %>
+    </div>
+    <div class="category-img">
+      <%= render partial: 'two_article', collection: @two_articles %>
+    </div>
+    <div class="category-img">
+      <%= render partial: 'three_article', collection: @three_articles %>
+    </div>
+    <div class="category-img">
+      <%= render partial: 'four_article', collection: @four_articles %>
+    </div>
   </div>
 </div>

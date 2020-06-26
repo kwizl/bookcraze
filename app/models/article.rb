@@ -8,6 +8,8 @@ class Article < ApplicationRecord
 
   validates :title, presence: true
   validates :text, presence: true
+  validates :image, presence: true
+  
   validates_associated :categories
 
   accepts_nested_attributes_for :categories
@@ -32,9 +34,24 @@ class Article < ApplicationRecord
     votes.count
   end
 
-  def self.categories_order
+  def self.categories_one
     find_by_sql(['SELECT * FROM articles a JOIN categories c ON a.id = c.article_id
-      WHERE a.id = c.article_id  GROUP BY c.name ORDER BY c.priority ASC'])
+      WHERE c.priority = 1 ORDER BY a.created_at DESC LIMIT 1'])
+  end
+
+  def self.categories_two
+    find_by_sql(['SELECT * FROM articles a JOIN categories c ON a.id = c.article_id
+      WHERE c.priority = 2 ORDER BY a.created_at DESC LIMIT 1'])
+  end
+
+  def self.categories_three
+    find_by_sql(['SELECT * FROM articles a JOIN categories c ON a.id = c.article_id
+      WHERE c.priority = 3 ORDER BY a.created_at DESC LIMIT 1'])
+  end
+
+  def self.categories_four
+    find_by_sql(['SELECT * FROM articles a JOIN categories c ON a.id = c.article_id
+      WHERE c.priority = 4 ORDER BY a.created_at DESC LIMIT 1'])
   end
 
   def self.category_article(name)

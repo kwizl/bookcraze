@@ -4,7 +4,10 @@ class ArticlesController < ApplicationController
   def index
     @main_articles = Article.most_voted(article_most_voted)
     @articles = Article.other_voted(article_most_voted)
-    @category_articles = Article.categories_order
+    @one_articles = Article.categories_one
+    @two_articles = Article.categories_two
+    @three_articles = Article.categories_three
+    @four_articles = Article.categories_four
   end
 
   def new
