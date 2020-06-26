@@ -16,6 +16,7 @@ gem 'sass-rails', '>= 6'
 gem 'turbolinks', '~> 5'
 gem 'webpacker', '~> 4.0'
 gem 'sqlite3'
+gem 'image_processing', '~> 0.2.3'
 
 group :development, :test do
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
