@@ -8,9 +8,9 @@ This is a web application where bookworms can share their passion and love for t
 
 ## Live Demo
 
-[Live Demo](https://serene-hamlet-36138.herokuapp.com/)
+[Live Demo]()
 
-![screenshot](./app/assets/images/screenshot.png)
+![screenshot](./app/assets/images/index-page.png)
 
 ## Getting Started
 
@@ -20,7 +20,7 @@ To get a local copy up and running follow these simple example steps.
 
 Ruby: 2.6.3
 Rails: 5.2.3
-Sqlite3
+Postgres Database
 Chromium Chrome Driver: 83.0 and 
 
 ### Setup
@@ -35,6 +35,8 @@ bundle install
 
 Setup database with:
 
+```
+rails db:create
 ```
 rails db:migrate
 ```
