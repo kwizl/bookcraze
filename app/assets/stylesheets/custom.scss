@@ -39,6 +39,7 @@ a {
   .menu {
     width: 80%;
     justify-content: space-between;
+    padding-left: 100px;
 
     .menu-item {
       float: left;
@@ -63,6 +64,15 @@ a {
 .nav a:hover {
   color: $primary-color;
   text-decoration-line: none;
+}
+
+.dot {
+  color: $primary-color;
+}
+
+#main-index {
+  background-color: $primary-color-dark;
+  padding-top: 20px;
 }
 
 input.btn.btn-primary {
