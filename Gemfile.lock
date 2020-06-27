@@ -232,6 +232,7 @@ GEM
       rack (>= 1.1)
       rubocop (>= 0.82.0)
     ruby-progressbar (1.10.1)
+    rubygems-update (2.7.10)
     rubyzip (2.3.0)
     sass-rails (6.0.0)
       sassc-rails (~> 2.1, >= 2.1.1)
@@ -317,6 +318,7 @@ DEPENDENCIES
   rspec-rails (~> 4.0.0)
   rubocop
   rubocop-rails
+  rubygems-update (~> 2.6, >= 2.6.6)
   sass-rails (>= 6)
   selenium-webdriver (~> 3.142, >= 3.142.7)
   shoulda-matchers
