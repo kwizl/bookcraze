@@ -6,14 +6,20 @@
     <div class="category-img">
       <%= render partial: 'one_article', collection: @one_articles %>
     </div>
-    <div class="category-img">
-      <%= render partial: 'two_article', collection: @two_articles %>
-    </div>
-    <div class="category-img">
-      <%= render partial: 'three_article', collection: @three_articles %>
-    </div>
-    <div class="category-img">
-      <%= render partial: 'four_article', collection: @four_articles %>
-    </div>
+    <% if @two_articles.count > 0 %>
+      <div class="category-img">
+        <%= render partial: 'two_article', collection: @two_articles %>
+      </div>
+    <% end %>
+    <% if @three_articles.count > 0 %>
+      <div class="category-img">
+        <%= render partial: 'three_article', collection: @three_articles %>
+      </div>
+    <% end %>
+    <% if @four_articles.count > 0 %>
+      <div class="category-img">
+        <%= render partial: 'four_article', collection: @four_articles %>
+      </div>
+    <% end %>
   </div>
 </div>
