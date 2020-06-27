@@ -8,17 +8,32 @@ module ApplicationHelper
     hash.invert.max&.last
   end
 
-  def categories_nav
-    categories_navbar = Category.find_by_sql(['SELECT name FROM categories GROUP BY name'])
-    categories_navbar
+  def category_one
+    Category.find_by_sql(["SELECT * FROM categories 
+      WHERE name = 'Tech' LIMIT 1"])
   end
 
-  def category_navbar(categories)
+  def category_two
+    Category.find_by_sql(["SELECT * FROM categories 
+      WHERE name = 'Food' LIMIT 1"])
+  end
+
+  def category_three
+     Category.find_by_sql(["SELECT * FROM categories 
+      WHERE name = 'Business' LIMIT 1"])
+  end
+
+  def category_four
+    Category.find_by_sql(["SELECT * FROM categories 
+      WHERE name = 'Wildlife' LIMIT 1"])
+  end
+
+  def nav(categories)
     html = ''
     categories.each do |c|
       html += <<-HTML
       <div class='menu-item'>
-        #{link_to c.name}
+        #{link_to c.name, category_path(c.id)}
       </div>
       HTML
     end

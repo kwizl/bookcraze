@@ -9,7 +9,16 @@
         <%= link_to 'Write Article', new_article_path %>
       </div>
       <div class='menu-item'>
-        <%= category_navbar(categories_nav) %>
+        <%= nav(category_one) %>
+      </div>
+      <div class='menu-item'>
+         <%= nav(category_two) %>
+      </div>
+      <div class='menu-item'>
+        <%= nav(category_three) %>
+      </div>
+      <div class='menu-item'>
+        <%= nav(category_four) %>
       </div>
     <% else %>
     <% end %>
