@@ -9,22 +9,22 @@ module ApplicationHelper
   end
 
   def category_one
-    Category.find_by_sql(["SELECT * FROM categories 
+    Category.find_by_sql(["SELECT * FROM categories
       WHERE name = 'Tech' LIMIT 1"])
   end
 
   def category_two
-    Category.find_by_sql(["SELECT * FROM categories 
+    Category.find_by_sql(["SELECT * FROM categories
       WHERE name = 'Food' LIMIT 1"])
   end
 
   def category_three
-     Category.find_by_sql(["SELECT * FROM categories 
+    Category.find_by_sql(["SELECT * FROM categories
       WHERE name = 'Business' LIMIT 1"])
   end
 
   def category_four
-    Category.find_by_sql(["SELECT * FROM categories 
+    Category.find_by_sql(["SELECT * FROM categories
       WHERE name = 'Wildlife' LIMIT 1"])
   end
 

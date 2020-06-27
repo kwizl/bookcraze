@@ -9,7 +9,7 @@ class Article < ApplicationRecord
   validates :title, presence: true
   validates :text, presence: true
   validates :image, presence: true
-  
+
   validates_associated :categories
 
   accepts_nested_attributes_for :categories

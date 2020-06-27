@@ -21,7 +21,7 @@ RSpec.describe 'Articles', driver: :selenium_chrome, js: true do
         fill_in 'Title', with: article[:title]
         fill_in 'Text', with: article[:text]
         attach_file('Image', Rails.root + 'spec/fixtures/the_king.jpeg')
-        fill_in 'Name', with: category[:name]
+        select('Wildlife', from: 'Name')
         fill_in 'Priority', with: category[:priority]
       end
       click_button 'Save'

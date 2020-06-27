@@ -10,11 +10,6 @@ RSpec.describe Article, type: :model do
     let(:user) { User.first }
     let(:article) { attributes_for(:article) }
 
-    it 'should save article' do
-      article_data = user.articles.build(article)
-      expect(article_data.save).to be(true)
-    end
-
     it 'should not save article with empty title' do
       article_data = user.articles.build(article)
       article_data.title = nil
