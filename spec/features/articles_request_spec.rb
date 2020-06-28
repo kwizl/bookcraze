@@ -10,7 +10,7 @@ RSpec.describe 'Articles', driver: :selenium_chrome, js: true do
       visit login_path
 
       within('#login-div > form') do
-        fill_in 'Name', with: user.name
+        fill_in 'Name', with: user[:name]
       end
 
       click_button 'Login'
