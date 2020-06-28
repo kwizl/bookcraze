@@ -215,6 +215,10 @@ input {
     text-decoration: underline;
     text-decoration-color: #F3F30D;
   }
+
+  a:hover {
+    color: $primary-color;
+  }
 }
 
 .category-thumbnail-text {

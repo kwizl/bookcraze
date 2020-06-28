@@ -1,5 +1,6 @@
 # Bookcraze App
 This is a web application where bookworms can share their passion and love for the books that they love read. The user can signup, create an article with the category that the book falls in. Whether it is a novel or falls in the education category. The user can upload a thumbnail image and other users can vote for the article that they think impacted them the most. The most voted article appears as the main thumbnail while the rest are normal sizes. The category section displays the most recent articles in each category ordered by their priority.
+The category names have the following priority. Tech - 1, Food - 2, Business- 3, Wildlife - 4.
 
 ## Built With
 
@@ -8,7 +9,7 @@ This is a web application where bookworms can share their passion and love for t
 
 ## Live Demo
 
-[Live Demo]()
+[Live Demo](https://arcane-dusk-51595.herokuapp.com)
 
 ![screenshot](./app/assets/images/index-page.png)
 
