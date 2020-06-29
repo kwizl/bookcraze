@@ -1,0 +1,17 @@
+.category-article-text {
+  width: 300px;
+  font-weight: 900;
+}
+
+.category-article-text > div {
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.cat-article, .read-more a {
+  color: $primary-color;
+}
+
+#cat-row {
+  margin: 0 !important;
+}

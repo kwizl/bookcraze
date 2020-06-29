@@ -1,0 +1,31 @@
+#footer {
+  height: 50px;
+  background-color: $primary-color-dark;
+  padding-top: 10px;
+  position: absolute;
+  bottom: 0;
+  margin-top: auto;
+  width: 100%;
+}
+
+#footer-logo a {
+  font-weight: 700;
+  color: $primary-color;
+}
+
+.footer-icons {
+  margin-right: 30px;
+}
+
+.footer-icons i {
+  color: $primary-color;
+}
+
+.footer-links {
+  color: $primary-color;
+}
+
+.footer-links:hover {
+  color: $primary-color;
+  text-decoration: none;
+}
