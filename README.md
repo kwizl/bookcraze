@@ -74,7 +74,7 @@ To run all test type **bundle exec rspec** in the terminal. To run a specific te
 
 ## Acknowledgment
 
-This site was originally designed by **Nelson Sakwa** on Behance
+This site was originally designed by **Nelson Sakwa** on Behance. It is under the **Creative Common License**
 
 ## Authors
 
