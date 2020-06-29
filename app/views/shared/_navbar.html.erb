@@ -4,30 +4,7 @@
     <div class="menu-item">
       <%= link_to 'Home', articles_path %>
     </div>
-    <% if session[:name] %>
-      <div class="menu-item">
-        <%= link_to 'Write Article', new_article_path %>
-      </div>
-      <div class='menu-item'>
-        <%= nav(category_one) %>
-      </div>
-      <div class='menu-item'>
-         <%= nav(category_two) %>
-      </div>
-      <div class='menu-item'>
-        <%= nav(category_three) %>
-      </div>
-      <div class='menu-item'>
-        <%= nav(category_four) %>
-      </div>
-    <% else %>
-    <% end %>
+    <%= session_menu %>
   </div>
-  <% if session[:name] %>
-    <li class="nav-item"><%= current_user.name %></li>
-    <li class="nav-item pl-3"><%= link_to 'Logout', logout_path %></li>
-  <% else %>
-    <li id='logout-link' class="nav-item"><%= link_to 'Login ', login_path %>|</li>
-    <li class="nav-item"><%= link_to ' Register', new_user_path %></li>
-  <% end %>
+  <%= session_logout %>
 </nav>

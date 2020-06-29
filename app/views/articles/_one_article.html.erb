@@ -1,4 +1,4 @@
-<%= image_tag one_article.thumbnail if one_article.image.attached? %>
+<%= image_tag one_article.thumbnail %>
 <div class='category-thumbnail-title ml-2 mr-2'>
   <%= link_to one_article.name, category_path(one_article.id) %>
 </div>

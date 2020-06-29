@@ -14,16 +14,8 @@
   <body id="body">
     <div class='main'>
       <%= render 'shared/navbar' %>
-      <% if notice.present? %>
-        <div class="notice">
-          <p> <%= notice %> </p>
-        </div>
-      <% end %>
-      <% if alert.present? %>
-        <div class="alert">
-          <p> <%= alert %> </p>
-        </div>
-      <% end %>
+      <%= notice_helper %>
+      <%= alert_helper %>
       <div id='content'>
         <%= yield %>
       </div>
