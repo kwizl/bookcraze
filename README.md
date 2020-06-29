@@ -1,6 +1,5 @@
 # Bookcraze App
-This is a web application where bookworms can share their passion and love for the books that they love read. The user can signup, create an article with the category that the book falls in. Whether it is a novel or falls in the education category. The user can upload a thumbnail image and other users can vote for the article that they think impacted them the most. The most voted article appears as the main thumbnail while the rest are normal sizes. The category section displays the most recent articles in each category ordered by their priority.
-The category names have the following priority. Tech - 1, Food - 2, Business- 3, Wildlife - 4.
+This is a web application where bookworms can share their passion and love for the books that they love read via writing articles.
 
 ## Built With
 
@@ -55,8 +54,11 @@ rails s
 ```
 Open `http://localhost:3000/` in your browser.
 
+## Usage
+The user can signup, login, create an article with the category that the book falls in. Whether it is a novel or falls in the education category. The user can upload a thumbnail image and other users can vote for the article that they think impacted them the most. The most voted article appears as the main thumbnail while the rest are normal sizes. The category section displays the most recent articles in each category ordered by their priority.
+The category names have the following priority. Wildlife - 1, Food - 2, Business- 3, Tech - 4.
 
-### Run tests
+**Run tests**
 
 Make sure to have installed chromium chrome driver [link](https://chromedriver.chromium.org/downloads)
 
@@ -69,6 +71,10 @@ bundle exec rspec
 > All tests are contained in the rspec folder which is in the root directory of the project. 
 To run all test type **bundle exec rspec** in the terminal. To run a specific test type 
 **bundle exec rspec spec/folder_name/spec_file.rb**
+
+## Acknowledgment
+
+This site was originally designed by **Nelson Sakwa** on Behance
 
 ## Authors
 
