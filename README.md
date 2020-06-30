@@ -8,7 +8,7 @@ This is a web application where bookworms can share their passion and love for t
 
 ## Live Demo
 
-[Live Demo](https://arcane-dusk-51595.herokuapp.com)
+[Live Demo](https://enigmatic-springs-19832.herokuapp.com)
 
 ![screenshot](./app/assets/images/index-page.png)
 
