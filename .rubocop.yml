@@ -12,6 +12,8 @@ AllCops:
 
 Layout/LineLength:
   Max: 130
+Metrics/ModuleLength:
+  Max: 130
 Metrics/MethodLength:
   Include:
     - "app/controllers/*"

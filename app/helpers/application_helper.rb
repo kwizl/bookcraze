@@ -56,7 +56,7 @@ module ApplicationHelper
       <div id="error_explanation">
         <div class="alert alert-danger">
           The form contains
-          #{pluralize(object.errors.count, "error")}.
+          #{pluralize(object.errors.count, 'error')}.
         </div>
         <ul>
           #{error_html(object)}
@@ -70,7 +70,7 @@ module ApplicationHelper
   def session_menu
     html = ''
     if session[:name]
-    html += <<-HTML
+      html += <<-HTML
       <div class="menu-item">
         #{link_to 'Write Article', new_article_path}
       </div>
@@ -93,16 +93,16 @@ module ApplicationHelper
 
   def session_logout
     html = ''
-    if session[:name]
-    html += <<-HTML
+    html += if session[:name]
+              <<-HTML
       <li class="nav-item">#{current_user.name}</li>
       <li class="nav-item pl-3">#{link_to 'Logout', logout_path}</li>
-    HTML
-    else
-    html += <<-HTML
+              HTML
+            else
+              <<-HTML
       #{session_login}
-    HTML
-    end
+              HTML
+            end
     html.html_safe
   end
 
