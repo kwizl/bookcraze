@@ -1,0 +1,46 @@
+a {
+  text-decoration: none;
+  color: $primary-color-text;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 16px 48px;
+  background-color: white;
+  color: $primary-color-light;
+  height: 60px;
+  
+  .menu {
+    width: 80%;
+    justify-content: space-between;
+    padding-left: 100px;
+
+    .menu-item {
+      float: left;
+      margin: 0 15px;
+
+      .active {
+        a {
+          color: #fff;
+        }
+      }
+    }
+  }
+}
+
+.nav a, .nav li {
+  color: $primary-color-light;
+  font-size: 15px;
+  font-weight: 700;
+  color: rgb(53, 53, 53);
+}
+
+.nav a:hover {
+  color: $primary-color;
+  text-decoration-line: none;
+}
+
+.dot {
+  color: $primary-color;
+}

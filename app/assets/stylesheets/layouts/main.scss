@@ -1,0 +1,20 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+}
+
+.main {
+  position: relative;
+  min-height: 100vh;
+}
+
+#content {
+  padding-bottom: 2.5rem;
+}

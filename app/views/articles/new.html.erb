@@ -1,0 +1,43 @@
+  <h3 class="text-center topic">Register</h3>
+  <div id='article-div' class="d-flex justify-content-center">
+    <%= form_with(model: @article, local: true) do |f| %>
+      <%= render 'shared/error_messages', object: f.object %>
+      <div class="form-group">
+        <%= f.label :title, class: 'col col-form-label' %>
+        <div class="col">
+          <%= f.text_field :title, class: 'form-control' %>
+        </div>
+      </div>
+      <div class="form-group">
+        <%= f.label :text, class: 'col col-form-label' %>
+        <div class="col">
+          <%= f.text_area :text, class: 'form-control' %>
+        </div>
+      </div>
+      <div class="form-group">
+        <%= f.label :image, class: 'col col-form-label' %>
+        <div class="col">
+          <%= f.file_field :image, class: 'form-control' %>
+        </div>
+      </div>
+      <%= f.fields_for :categories do |ff| %>
+        <div class="form-group">
+          <%= ff.label :name, class: 'col col-form-label' %>
+          <div class="col">
+            <%= ff.select(:name, ['Tech', 'Food', 'Business', 'Wildlife'], {}, { class: 'form-control' }) %>
+          </div>
+        </div>
+        <div class="form-group">
+          <%= ff.label :priority, class: 'col col-form-label' %>
+          <div class="col">
+            <%= ff.text_field :priority, class: 'form-control' %>
+          </div>
+        </div>
+      <% end %>
+      <div class="form-row text-center mb-3 pb-3">
+        <div class="col-12">
+          <%= f.submit 'Save', class: 'btn btn-primary' %>
+        </div>
+      </div>
+    <% end %>
+  </div>

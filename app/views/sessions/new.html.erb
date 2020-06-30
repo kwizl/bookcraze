@@ -1,0 +1,19 @@
+<div>
+  <h3 class="text-center topic">Login</h3>
+  <div id='login-div' class="d-flex justify-content-center">
+  <%= form_tag sessions_path, method: :post do %>
+    <div class="form-group">
+      <%= label_tag :name, nil, class: 'col col-form-label' %>
+      <div class="col">
+        <%= text_field_tag :name, nil, class: 'form-control' %>
+      </div>
+    </div>
+    <div class="form-group text-center"><%= link_to  'Create account', new_user_path %></div>
+    <div class="form-row text-center">
+      <div class="col-12">
+        <%= submit_tag "Login", class: 'btn btn-primary' %>
+      </div>
+    </div>
+  <% end %>
+  </div>
+</div>

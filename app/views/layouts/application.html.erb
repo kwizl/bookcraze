@@ -6,10 +6,22 @@
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag 'https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css' %>
+    <%= stylesheet_link_tag 'https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
-    <%= yield %>
+  <body id="body">
+    <div class='main'>
+      <%= render 'shared/navbar' %>
+      <%= notice_helper %>
+      <%= alert_helper %>
+      <div id='content'>
+        <%= yield %>
+      </div>
+      <div id='footer' class='d-flex justify-content-center'>
+        <%= render 'shared/footer' %>
+      </div>
+    </div>
   </body>
 </html>

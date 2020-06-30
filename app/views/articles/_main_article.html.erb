@@ -1,0 +1,9 @@
+<%= image_tag main_article.main_thumbnail %>
+<div class='main-thumbnail-info'>
+  <div class='main-thumbnail-title'>
+    <%= link_to main_article.title, main_article %>
+  </div>
+  <div class='main-thumbnail-text'>
+    <p id='article-text' class='lead'><%= truncate(main_article.text, 250) %><p>
+  <div>
+</div>
