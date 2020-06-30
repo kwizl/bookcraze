@@ -37,21 +37,24 @@ Setup database with:
 
 ```
 rails db:create
+
 ```
 rails db:migrate
+
 ```
 rails db:seed
+
+```
 
 ### Usage
 
 You can clone or download this repo (you need ruby installed in your computer).
 
-    git clone git@github.com:kwizl/lifestyle.git
+**git clone git@github.com:kwizl/lifestyle.git**
 Start server with:
 
-```
 rails s
-```
+
 Open `http://localhost:3000/` in your browser.
 
 ## Usage
