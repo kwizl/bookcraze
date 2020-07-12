@@ -24,13 +24,7 @@
         <div class="form-group">
           <%= ff.label :name, class: 'col col-form-label' %>
           <div class="col">
-            <%= ff.select(:name, ['Tech', 'Food', 'Business', 'Wildlife'], {}, { class: 'form-control' }) %>
-          </div>
-        </div>
-        <div class="form-group">
-          <%= ff.label :priority, class: 'col col-form-label' %>
-          <div class="col">
-            <%= ff.text_field :priority, class: 'form-control' %>
+            <%= ff.select(:name, ['Tech', 'Business', 'Food', 'Wildlife'], {}, { class: 'form-control' }) %>
           </div>
         </div>
       <% end %>
