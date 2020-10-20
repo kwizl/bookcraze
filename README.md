@@ -1,5 +1,5 @@
 # Bookcraze App
-This is a web application where bookworms can share their passion and love for the books that they love read via writing articles.
+It is a web application where bookworms can share their passion and love for the books that they love read via writing articles.
 
 ## Built With
 
@@ -14,7 +14,7 @@ This is a web application where bookworms can share their passion and love for t
 
 ## Getting Started
 
-To get a local copy up and running follow these simple example steps.
+To get a local copy up and running, follow these simple example steps.
 
 ### Prerequisites
 
@@ -48,7 +48,7 @@ rails db:seed
 
 ## Usage
 
-You can clone or download this repo (you need ruby installed in your computer).
+You can clone or download this repo (you need ruby installed on your computer).
 
 **git clone git@github.com:kwizl/lifestyle.git**
 Start server with:
@@ -57,7 +57,7 @@ rails s
 
 Open `http://localhost:3000/` in your browser.
 
-The user can signup, login, create an article with the category that the book falls in. Whether it is a novel or falls in the education category. The user can upload a thumbnail image and other users can vote for the article that they think impacted them the most. The most voted article appears as the main thumbnail while the rest are normal sizes. The category section displays the most recent articles in each category ordered by their priority.
+The user can signup, login, create an article with the category that the book falls in. The user can upload a thumbnail image and article content. The created articles can be voted for by users. The most voted article appears as the main thumbnail while the rest take on smaller sizes. The category section displays the most recent articles in each category ordered by their priority.
 The category names have the following priority. Wildlife - 1, Food - 2, Business- 3, Tech - 4.
 
 **Run tests**
@@ -70,7 +70,7 @@ And then run:
 bundle exec rspec
 ```
 
-> All tests are contained in the rspec folder which is in the root directory of the project. 
+> All tests are contained in the RSpec folder which is in the root directory of the project. 
 To run all test type **bundle exec rspec** in the terminal. To run a specific test type 
 **bundle exec rspec spec/folder_name/spec_file.rb**
 
@@ -88,8 +88,4 @@ This site was originally designed by **Nelson Sakwa** on Behance. It is under th
 
 ## 🤝 Contributing
 
-Contributions, issues and feature requests are welcome!
-
-## Show your support
-
-Give a ⭐️ if you like this project!
+Contributions, issues, and feature requests are welcome!
