@@ -12,6 +12,10 @@ It is a web application where bookworms can share their passion and love for the
 
 ![screenshot](./app/assets/images/index-page.png)
 
+## Video Demo
+
+[Video Demo](https://www.youtube.com/watch?v=Yo4yVBuAD-g)
+
 ## Getting Started
 
 To get a local copy up and running, follow these simple example steps.
