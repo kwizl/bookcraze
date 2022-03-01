@@ -8,7 +8,7 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'bootsnap', '>= 1.4.2', require: false
 gem 'bootstrap', '~> 4.5'
 gem 'bootstrap-sass', '~> 3.4', '>= 3.4.1'
-gem 'image_processing', '~> 0.2.3'
+gem 'image_processing', '~> 1.12.2'
 gem 'jbuilder', '~> 2.7'
 gem 'mini_magick', '~> 4.10', '>= 4.10.1'
 gem 'pg', '~> 0.18.4'
